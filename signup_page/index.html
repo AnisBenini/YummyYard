@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+<body>
+    <button class="logo-button" onclick="goToMainPage()">
+        <img src="img/home.svg" alt="Company Logo" class="logo-img">
+      </button>
+  <div class="signup">
+    <div class="image-section">
+      <div class="carousel">
+        <!-- Slide 1 - Sales & Inventory -->
+        <div class="slide active" id="slide1">
+          <img class="placeholder-image" src="img/1.svg" alt="Inventory and Sales Dashboard">
+          <div class="slide-title">
+            <div class="title">Manage Sales, Inventory & Transactions</div>
+            <div class="subtitle">Keep a close eye on your inventory levels to ensure that you always have enough stock to meet customer demand</div>
+          </div>
+        </div>
+
+        <!-- Slide 2 - Business Optimization -->
+        <div class="slide" id="slide2">
+          <img class="placeholder-image" src="img/2.svg" alt="Business Dashboard">
+          <div class="slide-title">
+            <div class="title">Optimize Your Business</div>
+            <div class="subtitle">Maximizing Efficiency and Growth for your Business</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 - Easy Payment -->
+        <div class="slide" id="slide3">
+          <img class="placeholder-image" src="img/3.svg" alt="Credit Card and Payment">
+          <div class="slide-title">
+            <div class="title">Easy Payment Method</div>
+            <div class="subtitle">Making Payment Simple & Convenient</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation controls -->
+      <div class="navigation">
+        <button class="nav-arrow prev" id="prevBtn" aria-label="Previous slide"></button>
+        <div class="slide-dots">
+          <span class="dot active" data-slide="0" role="button" aria-label="Go to slide 1"></span>
+          <span class="dot" data-slide="1" role="button" aria-label="Go to slide 2"></span>
+          <span class="dot" data-slide="2" role="button" aria-label="Go to slide 3"></span>
+        </div>
+        <button class="nav-arrow next" id="nextBtn" aria-label="Next slide"></button>
+      </div>
+    </div>
+
+    <!-- Right side with signup form -->
+    <div class="signup-section">
+      <div class="signup-container">
+        <div class="signup-header">
+          <h1 class="signup-title">Create Account</h1>
+          <p class="signup-subtitle">Join us today and start managing your business efficiently</p>
+        </div>
+
+        <form id="signupForm">
+          <!-- Full Name Field -->
+          <div class="input-field">
+            <div class="input-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <input type="text" placeholder="Full Name" id="nameField" aria-label="Full Name" />
+            <div class="error-message name-error">Required</div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="input-field">
+            <div class="input-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <input type="email" placeholder="Email Address" id="emailField" aria-label="Email Address" />
+            <div class="error-message email-error">Please enter a valid email address</div>
+            <div class="error-message email-required">Required</div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="input-field">
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <input type="password" placeholder="Password" id="passwordField" aria-label="Password" />
+            <button type="button" class="toggle-visibility" id="togglePassword" aria-label="Toggle password visibility">
+              <i class="fas fa-eye-slash"></i>
+            </button>
+            <div class="error-message password-error">Password must be at least 8 characters</div>
+            <div class="error-message password-required">Required</div>
+            <div class="password-strength-indicator">
+              <span class="strength-bar"></span>
+              <span class="strength-bar"></span>
+              <span class="strength-bar"></span>
+              <span class="strength-bar"></span>
+            </div>
+          </div>
+
+          <!-- Confirm Password Field -->
+          <div class="input-field">
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <input type="password" placeholder="Confirm Password" id="confirmPasswordField" aria-label="Confirm Password" />
+            <div class="error-message confirm-password-error">Passwords do not match</div>
+            <div class="error-message confirm-password-required">Required</div>
+          </div>
+
+          <div class="form-options">
+            <label class="terms-checkbox">
+              <input type="checkbox" class="terms-agreement" id="termsAgreement" />
+              <span class="checkbox-container"><i class="fas fa-check"></i></span>
+              <span class="terms-label">I agree to the <a href="#" class="terms-link">Terms & Conditions</a></span>
+            </label>
+          </div>
+
+          <button type="submit" class="signup-button" id="signupButton">
+            <span class="button-text">Sign Up</span>
+            <span class="spinner"></span>
+          </button>
+        </form>
+
+        <div class="divider">or sign up with</div>
+
+        <div class="social-login">
+          <button class="social-button google" aria-label="Sign up with Google">
+            <i class="fab fa-google"></i>
+          </button>
+          <button class="social-button facebook" aria-label="Sign up with Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button class="social-button apple" aria-label="Sign up with Apple">
+            <i class="fab fa-apple"></i>
+          </button>
+        </div>
+
+        <p class="login-text">
+          Already have an account? <a href="../login_page/index.html" class="login-link">Log in</a>
+        </p>
+
+        <p class="secure-text">
+          <i class="fas fa-shield-alt"></i>
+          Your data is secure with us. We use industry-standard encryption
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

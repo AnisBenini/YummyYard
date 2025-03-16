@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>YummyYard Assistant</title>
+</head>
+<body>
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <img src="chat.png" alt="Chat Icon" />
+        <p>YummyYard Assistant</p>
+      </div>
+    </header>
+    <main class="msger-chat">
+      <!-- Initial Bot Message -->
+      <div class="msg left-msg">
+        <div class="msg-img" style="background-image: url(bot.jpg)"></div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">YummyYard Assistant</div>
+            <div class="msg-info-time">12:00</div>
+          </div>
+          <div class="msg-text">
+            Welcome to YummyYard Assistant!<br />
+            How can I help you today? &#127828;
+          </div>
+        </div>
+      </div>
+      <!-- Quick Questions Section -->
+      <div class="quick-questions-container">
+        <h3>Quick Questions:</h3>
+        <ul class="question-list">
+          <li class="question-item" data-question="can i modify my order after placing it">Can I modify my order?</li>
+          <li class="question-item" data-question="what are your opening hours">Opening hours?</li>
+          <li class="question-item" data-question="do you offer delivery services">Delivery services? &#x1F69B;</li>
+          <li class="question-item" data-question="what payment methods do you accept">Payment methods? &#128178;</li>
+          <li class="question-item" data-question="where is your restaurant located">Restaurant location? &#128506;</li>
+          <li class="question-item" data-question="can i make a reservation">Make a reservation? &#x1F552;</li>
+        </ul>
+      </div>
+    </main>
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" placeholder="Enter your message..." />
+      <button type="submit" class="msger-send-btn"><i class="fa fa-paper-plane"></i></button>
+    </form>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
